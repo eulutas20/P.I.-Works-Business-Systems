@@ -1,0 +1,58 @@
+## General Overview
+This document contains photos of two different sections about a user panel. It shows user information and some details for adding new users. 
+---
+
+## 1. Page Structure
+
+### 1.1 Components
+- **New User Button**
+  - Action: Opens the “New User” form on the right side of the page. To perform this action, the button on the top left must be clicked. 
+  - Default State: Visible and enabled.
+
+- **Hide Disabled User Checkbox**
+  - Action: When this box is checked, user information is clearly visible. When “false” the information is hidden. 
+
+- **User Table**
+  - Columns:
+    - ID: Numeric identifier for each user.
+    - User Name: The username of the user.
+    - Email: Email address of the user.
+    - Enabled: Boolean indicating whether the user is active.
+  - Default Behavior: Users' information is sorted by “id” respectively. 
+  - Filtering: It is seen that each feature can be filtered or sorted separately. 
+
+- **New User Form**
+  - Fields:
+    - Username: Text input for the user’s username.
+    - Display Name: Text input for the user’s full name.
+    - Phone: Text input for the user’s phone number.
+    - Email: Text input for the user’s email address.
+    - User Roles: Dropdown to select one or multiple roles 
+        - There are several options. : Guest, Admin, SuperAdmin.
+    - Enabled: Checkbox to mark whether the user is active or not.
+  - Save Button:
+    - Saves the entered user information.
+    - This section cannot be actively used until the user enters the required fields. 
+
+---
+
+## 2. Behavior
+
+### 2.1 Initial State
+- When the page loads:
+  - Users' information is loaded into the table one by one. 
+  - The "Hide Disabled User" checkbox is unchecked.
+
+### 2.2 New User Workflow
+- Clicking the "New User" button:
+  - Displays the registration form.
+- Clicking "Save User":
+  - Validates the input.
+  - Saves the user and probably updates the table.
+
+### 2.3 Filtering Disabled Users
+- When the "Hide Disabled User" checkbox is checked:
+  - All rows with `Enabled = false` are hidden from the table.
+  - Unchecking it restores the full list.
+- Filtering and sorting can be done separately for each user feature. 
+
